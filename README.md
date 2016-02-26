@@ -1,9 +1,9 @@
 # Data should be in JSON format. See data.json
 
 # Requirements:
-Python 2.7
-easy_install pip
-pip install virtualenv
+* Python 2.7
+* easy_install pip
+* pip install virtualenv
 
 # create virtualenv and run requirements
 pushd .
