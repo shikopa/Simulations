@@ -1,0 +1,24 @@
+[
+  {
+    "Charlotte": [35.23, 80.85],
+    "San Francisco": [37.78, 122.42],
+    "Houston": [29.77, 95.33],
+    "Columbus": [39.98, 82.98],
+    "Detroit": [42.33, 83.05],
+    "Phoenix": [33.45, 112.07],
+    "Los Angeles": [34.05, 118.25],
+    "New York City": [40.72, 74.0],
+    "San Diego": [32.78, 117.15],
+    "Memphis": [35.12, 89.97],
+    "Baltimore": [39.28, 76.62],
+    "San Antonio": [29.53, 98.47],
+    "Fort Worth": [32.75, 97.33],
+    "Jacksonville": [30.32, 81.7],
+    "San Jose": [37.3, 121.87],
+    "Philadelphia": [39.95, 75.17],
+    "Dallas": [32.78, 96.8],
+    "Chicago": [41.88, 87.63],
+    "Indianapolis": [39.78, 86.15],
+    "Austin": [30.27, 97.77]
+  }
+]

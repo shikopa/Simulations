@@ -1,0 +1,12 @@
+*.py[cod]
+*.class
+
+# Virtualenv
+virtpy/
+
+# Mac system
+.DS_Store
+._.DS_Store
+
+# PyCharm IDE files
+.idea/
