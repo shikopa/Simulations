@@ -7,6 +7,7 @@
 
 # create virtualenv and run requirements
 * pushd .
+* virtualenv virtpy
 
 # Activate virtualenv
 * . virtpy/bin/activate
