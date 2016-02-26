@@ -1,8 +1,7 @@
-Data should be in JSON format. See data.json
+# Data should be in JSON format. See data.json
 
-Requirements:
-# Python 2.7
-
+# Requirements:
+Python 2.7
 easy_install pip
 pip install virtualenv
 
@@ -20,7 +19,7 @@ python manage.py migrate
 python manage.py createsuperuser --username admin --email admin@example.com
 
 # Enter the following Password for username: admin
-# test1234
+test1234
 
 # Run Django on localhost:8000
 python manage.py runserver
