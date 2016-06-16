@@ -3,6 +3,7 @@
 
 # Virtualenv
 virtpy/
+.virtpy/
 
 # Mac system
 .DS_Store
@@ -10,3 +11,8 @@ virtpy/
 
 # PyCharm IDE files
 .idea/
+
+migrations/
+*.sqlite3
+
+dump.rdb

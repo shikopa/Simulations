@@ -11,11 +11,11 @@ router.register(r'city', views.CityViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    # url(r'^', include(router.urls)),
-    url(r'^', views.city_list),
+    url(r'^', include(router.urls)),
+    url(r'^cities/', views.city_list),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^anneal/$', views.city_list),
     url(r'^anneal/(?P<pk>[0-9]+)/$', views.city_detail),
 ]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)

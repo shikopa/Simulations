@@ -113,7 +113,12 @@ class City(models.Model):
 
         """
         print 'annealing data'
+
         cities = cls.build_distance_map()
+
+        if not cities:
+            return [], 0.00
+
         distance_map = OrderedDict()
         current_tour = []
         temperature = 40000
@@ -129,8 +134,9 @@ class City(models.Model):
         best_tour = copy.deepcopy(current_tour)  # Initialize the best tour
         best_distance = current_distance
         print 'best_distance : ', best_distance
+        i = 0
         while temperature > 1:
-
+            i += 1
             new_tour = cls.randomize_tour(current_tour)
             new_distance = cls.calculate_tour_distance(new_tour, distance_map)
 
@@ -147,7 +153,7 @@ class City(models.Model):
 
             # Apply the cooling rate to the temperature
             temperature *= (1 - cooling_rate)
-
+        print 'iterations..... : ', i
         return best_tour, best_distance
 
     class Meta:

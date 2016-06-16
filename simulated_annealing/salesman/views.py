@@ -41,8 +41,20 @@ def city_list(request, format=None):
     """
     if request.method == 'GET':
         cities = City.objects.all()
-        serializer = CitySerializer(cities, many=True)
-        return Response(serializer.data)
+
+        if not cities:
+            return Response({'items': []},)
+
+        # Anneal the data, and get the best tour
+        tour, distance = City.simulate_annealing()
+        # Rotate the tour to New York City
+        index = -1 * tour.index('New York City')
+        tour = collections.deque(tour)
+        tour.rotate(index)
+
+        # return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response({'items': list(tour)}, status=status.HTTP_200_OK)
+
 
     elif request.method == 'POST':
         # clear the DB of Cities
@@ -60,7 +72,6 @@ def city_list(request, format=None):
             index = -1 * tour.index('New York City')
             tour = collections.deque(tour)
             tour.rotate(index)
-
 
             # return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response({'items': list(tour)}, status=status.HTTP_201_CREATED)
